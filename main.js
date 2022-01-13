@@ -6,6 +6,7 @@ const createChassis = () => {
 	return newChassisObject
 }
 
+const chassis = createChassis()
 
 const addBody = (chassisObject) => {
 	// Use dot notation to add a new property
@@ -15,24 +16,38 @@ const addBody = (chassisObject) => {
 	return chassisObject
 }
 
+const chassisWithBody = addBody(chassis)
+
 const addWheels = (chassisObject) => {
     chassisObject.wheels = 4
     return chassisObject
 }
+
+const chassisWithWheels = addWheels(chassisWithBody)
 
 const addEngine = (chassisObject) => {
     chassisObject.engine = "4.8L"
     return chassisObject
 }
 
-const addSteeringWhile = (chassisObject) => {
+const chassisWithEngine = addEngine(chassisWithWheels)
+
+const addSteeringWheels = (chassisObject) => {
     chassisObject.steeringWheel = "Tilting"
     return chassisObject
 }
+
+const chassisWithSteering = addSteeringWheels(chassisWithEngine)
 
 const addDriveTrain = (chassisObject) => {
     chassisObject.driveTrain = "Two wheel drive"
     return chassisObject
 }
 
-console.log(chassisObject)
+const fordFever = addDriveTrain(chassisWithSteering)
+
+createChassis()
+
+console.log(fordFever)
+
+
