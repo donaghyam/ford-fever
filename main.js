@@ -6,6 +6,7 @@ const createChassis = () => {
 	return newChassisObject
 }
 
+
 const addBody = (chassisObject) => {
 	// Use dot notation to add a new property
 	chassisObject.body = "Fever"
@@ -34,4 +35,4 @@ const addDriveTrain = (chassisObject) => {
     return chassisObject
 }
 
-
+console.log(chassisObject)
